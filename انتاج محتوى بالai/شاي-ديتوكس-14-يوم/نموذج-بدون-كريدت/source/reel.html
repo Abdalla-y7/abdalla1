@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#0E3B2C;--green:#2F8F4E;--leaf:#7CC36B;--cream:#F7F2E8;--sand:#EFE6D2;--gold:#E8B54A;--coral:#E9573F}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;font-family:'Tajawal',sans-serif}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--cream)}
+.scene{position:absolute;inset:0;opacity:0}
+.c{position:absolute;left:80px;right:80px;text-align:center}
+.pack{position:absolute;border-radius:28px;box-shadow:0 50px 90px rgba(10,40,25,.35)}
+.bar{position:absolute;left:0;right:0;bottom:0;height:150px;display:flex;justify-content:center;align-items:center;gap:60px;font-size:40px;font-weight:700}
+.prog{position:absolute;top:0;left:0;height:10px;background:var(--leaf);z-index:9}
+.step{position:absolute;right:110px;left:110px;height:190px;border-radius:36px;background:#fff;display:flex;align-items:center;gap:40px;padding:0 50px;box-shadow:0 14px 40px rgba(14,59,44,.08)}
+.step .n{width:110px;height:110px;border-radius:50%;background:var(--deep);color:var(--cream);font-size:56px;font-weight:900;display:flex;align-items:center;justify-content:center;flex:none}
+.step .tx{font-size:58px;font-weight:800;color:var(--deep)}
+.step .tx small{display:block;font-size:38px;font-weight:500;color:#55685f}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="prog" id="prog"></div>
+
+  <!-- S1 hook -->
+  <div class="scene" id="s1" style="background:linear-gradient(180deg,var(--cream),var(--sand))">
+    <div class="c" id="s1a" style="top:330px;font-size:70px;font-weight:700;color:var(--green)">كل يوم بعد الغداء…</div>
+    <div class="c" id="s1b" style="top:450px;font-size:150px;line-height:1.1;font-weight:900;color:var(--deep)">تدوّر<br>على حلى؟</div>
+    <svg id="cup" style="position:absolute;left:330px;top:960px" width="420" height="560" viewBox="0 0 360 480">
+      <g id="steam" stroke="#9cbfa7" stroke-width="8" fill="none" stroke-linecap="round">
+        <path id="st1" d="M120 140 C100 105 140 85 120 45"/><path id="st2" d="M180 150 C160 110 200 90 180 35"/><path id="st3" d="M240 140 C220 105 260 85 240 45"/>
+      </g>
+      <path d="M70 180 L290 180 L268 440 Q266 460 246 460 L114 460 Q94 460 92 440 Z" fill="rgba(255,255,255,.6)" stroke="#c9d8cd" stroke-width="4"/>
+      <path id="liquid" d="M80 235 L280 235 L266 432 Q264 450 246 450 L114 450 Q96 450 94 432 Z" fill="#B8BF4E"/>
+      <path d="M290 250 Q350 260 340 330 Q330 390 278 380" fill="none" stroke="#c9d8cd" stroke-width="12"/>
+    </svg>
+  </div>
+
+  <!-- S2 product -->
+  <div class="scene" id="s2" style="background:var(--deep)">
+    <div class="c" id="s2a" style="top:260px;font-size:120px;line-height:1.15;font-weight:900;color:var(--cream)">خلّ عادتك<br><span style="color:var(--leaf)">كوب دافئ</span></div>
+    <div class="c" id="s2b" style="top:580px;font-size:50px;font-weight:500;color:#cfe3d6">شاي ديتوكس من مكونات عشبية</div>
+    <img class="pack" id="s2p" src="pack2x.png" style="width:600px;left:240px;top:780px">
+  </div>
+
+  <!-- S3 steps -->
+  <div class="scene" id="s3" style="background:var(--cream)">
+    <div class="c" style="top:260px;font-size:110px;font-weight:900;color:var(--deep)">سهل جداً</div>
+    <div class="step" id="st_1" style="top:560px"><div class="n">1</div><div class="tx">كيس واحد<small>في كوبك</small></div></div>
+    <div class="step" id="st_2" style="top:800px"><div class="n">2</div><div class="tx">ماء مغلي<small>صبّه فوق الكيس</small></div></div>
+    <div class="step" id="st_3" style="top:1040px"><div class="n">3</div><div class="tx">3 إلى 10 دقائق<small>وبالعافية</small></div></div>
+    <div class="c" id="s3n" style="top:1360px;font-size:46px;font-weight:700;color:var(--green)">مرة أو مرتين باليوم، بعد الغداء أو العشاء</div>
+  </div>
+
+  <!-- S4 14 days -->
+  <div class="scene" id="s4" style="background:var(--deep)">
+    <div class="c" style="top:300px;font-size:90px;font-weight:800;color:var(--cream)">تحدّي</div>
+    <div class="c" id="cnt" style="top:420px;font-size:520px;line-height:1;font-weight:900;color:var(--leaf)">1</div>
+    <div class="c" style="top:1000px;font-size:90px;font-weight:800;color:var(--cream)">يوم</div>
+    <div class="c" style="top:1160px;font-size:50px;font-weight:500;color:#cfe3d6">علبة = 14 كيس = 14 يوم التزام</div>
+    <div id="dots" style="position:absolute;top:1330px;left:140px;right:140px;display:grid;grid-template-columns:repeat(7,1fr);gap:22px"></div>
+  </div>
+
+  <!-- S5 offer -->
+  <div class="scene" id="s5" style="background:radial-gradient(circle at 50% 55%,#E9F5E1 0%,var(--cream) 65%)">
+    <div class="c" id="s5t" style="top:180px"><span style="display:inline-block;background:var(--coral);color:#fff;font-size:44px;font-weight:700;padding:16px 38px;border-radius:999px">عرض لفترة محدودة</span></div>
+    <div class="c" id="s5a" style="top:320px;font-size:130px;line-height:1.1;font-weight:900;color:var(--deep)">علبتين<br>بسعر علبة</div>
+    <img class="pack" id="p1" src="pack2x.png" style="width:360px;left:170px;top:660px">
+    <img class="pack" id="p2" src="pack2x.png" style="width:360px;left:500px;top:700px">
+    <div class="c" id="s5p" style="top:1265px;color:var(--green);font-weight:900;font-size:240px;line-height:1">199 <span style="font-size:70px;color:var(--deep)">ريال</span></div>
+    <div class="c" id="s5cta" style="top:1560px;height:150px;border-radius:40px;background:var(--deep);color:#fff;font-size:68px;font-weight:900;display:flex;align-items:center;justify-content:center">اطلب الحين، الرابط بالبايو</div>
+    <div class="bar" style="color:var(--deep)"><span>● توصيل مجاني</span><span>● الدفع عند الاستلام</span></div>
+  </div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const ease=x=>{x=clamp(x);return 1-Math.pow(1-x,3)};
+const back=x=>{x=clamp(x);const c=1.6;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const T={s1:[0,2.6],s2:[2.6,5.2],s3:[5.2,8.2],s4:[8.2,10.6],s5:[10.6,14]};
+const DUR=13.5;
+for(let i=1;i<=14;i++){const d=document.createElement('div');d.id='dt'+i;d.style.cssText='height:90px;border-radius:22px;border:3px solid rgba(124,195,107,.45)';$('dots').appendChild(d)}
+function inOut(t,[a,b]){return Math.min(ease((t-a)/0.35),ease((b-t)/0.3))}
+function pop(el,t,start,dy=60,dur=.5){const k=ease((t-start)/dur);el.style.opacity=k;el.style.transform=`translateY(${(1-k)*dy}px)`}
+function setTime(t){
+  $('prog').style.width=(t/DUR*100)+'%';
+  for(const s in T){$(s).style.opacity=(t>=T[s][0]-0.01&&t<=T[s][1]+0.01)?inOut(t,T[s]):0}
+  // s1
+  pop($('s1a'),t,0.1); pop($('s1b'),t,0.35,80);
+  const ck=back((t-0.7)/0.6); $('cup').style.transform=`scale(${0.6+0.4*ck})`; $('cup').style.opacity=clamp((t-0.7)/0.3);
+  [1,2,3].forEach(i=>{const p=$('st'+i);const ph=(t*1.2+i*0.33)%1;p.style.opacity=Math.sin(ph*Math.PI)*0.9;p.setAttribute('transform',`translate(0 ${-ph*40})`)});
+  // s2
+  pop($('s2a'),t,2.75); pop($('s2b'),t,3.0,40);
+  const pk=back((t-3.1)/0.7); $('s2p').style.transform=`translateY(${(1-pk)*500}px) rotate(${-6+Math.sin(t*1.5)*2}deg)`;
+  // s3
+  ['st_1','st_2','st_3'].forEach((id,i)=>{const k=back((t-5.45-i*0.55)/0.5);$(id).style.opacity=clamp((t-5.45-i*0.55)/0.25);$(id).style.transform=`translateX(${(1-k)*-300}px)`});
+  pop($('s3n'),t,7.2,30);
+  // s4
+  const n=Math.max(1,Math.min(14,Math.floor(1+(t-8.4)/1.5*13)));$('cnt').textContent=n;
+  for(let i=1;i<=14;i++){const d=$('dt'+i);const on=i<=n;d.style.background=on?'var(--leaf)':'transparent';d.style.borderColor=on?'var(--leaf)':'rgba(124,195,107,.45)'}
+  // s5
+  pop($('s5t'),t,10.7,30); pop($('s5a'),t,10.85,60);
+  const a=back((t-11.1)/0.6),b=back((t-11.3)/0.6);
+  $('p1').style.transform=`translateX(${(1-a)*-700}px) rotate(-8deg)`;$('p2').style.transform=`translateX(${(1-b)*700}px) rotate(7deg)`;
+  const pz=back((t-11.7)/0.5);$('s5p').style.opacity=clamp((t-11.7)/0.2);$('s5p').style.transform=`scale(${0.5+0.5*pz})`;
+  const pulse=t>12.3?1+0.035*Math.sin((t-12.3)*7):1;$('s5cta').style.opacity=clamp((t-12.1)/0.3);$('s5cta').style.transform=`scale(${pulse})`;
+}
+window.setTime=setTime;window.DUR=DUR;setTime(0);
+</script>
+</body>
+</html>

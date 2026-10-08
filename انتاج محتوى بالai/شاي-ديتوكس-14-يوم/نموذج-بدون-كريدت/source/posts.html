@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#0E3B2C;--green:#2F8F4E;--leaf:#7CC36B;--cream:#F7F2E8;--sand:#EFE6D2;--gold:#E8B54A;--coral:#E9573F;--ink:#13261E}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#ccc;font-family:'Tajawal',sans-serif;display:flex;flex-direction:column;gap:40px;padding:40px;align-items:flex-start}
+.ab{width:1080px;height:1350px;position:relative;overflow:hidden}
+.pack{position:absolute;border-radius:26px;box-shadow:0 40px 80px rgba(10,40,25,.35),0 8px 18px rgba(10,40,25,.2)}
+.chip{display:inline-flex;align-items:center;gap:12px;padding:14px 26px;border-radius:999px;font-weight:700;font-size:32px}
+.leaf{position:absolute;opacity:.9}
+.cod{position:absolute;left:0;right:0;bottom:0;height:110px;display:flex;justify-content:center;align-items:center;gap:46px;font-size:32px;font-weight:700}
+.cod span{display:flex;align-items:center;gap:12px}
+.dot{width:12px;height:12px;border-radius:50%}
+
+/* ---------- 1: after lunch routine ---------- */
+#a1{background:linear-gradient(180deg,var(--cream) 0%,var(--sand) 100%)}
+#a1 .kick{position:absolute;top:90px;right:80px;font-size:34px;font-weight:700;color:var(--green);letter-spacing:.5px}
+#a1 h1{position:absolute;top:140px;right:80px;left:80px;font-size:104px;line-height:1.12;font-weight:900;color:var(--deep)}
+#a1 h1 em{font-style:normal;color:var(--green)}
+#a1 .sub{position:absolute;top:400px;right:80px;width:560px;font-size:38px;line-height:1.5;color:#3d5148;font-weight:500}
+#a1 .pack{width:440px;top:600px;left:110px;transform:rotate(-5deg)}
+#a1 .cup{position:absolute;right:120px;top:700px}
+#a1 .cod{background:var(--deep);color:var(--cream)}
+
+/* ---------- 2: 14 day challenge ---------- */
+#a2{background:var(--deep);color:var(--cream)}
+#a2 .big{position:absolute;top:40px;right:60px;font-size:340px;letter-spacing:-10px;line-height:1;font-weight:900;color:var(--leaf)}
+#a2 .t1{position:absolute;top:120px;right:450px;font-size:74px;font-weight:800;line-height:1.15}
+#a2 .t2{position:absolute;top:300px;right:450px;font-size:36px;color:#cfe3d6;font-weight:500}
+#a2 .grid{position:absolute;top:470px;right:70px;width:520px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+#a2 .d{height:104px;border-radius:20px;border:2px solid rgba(124,195,107,.45);display:flex;align-items:center;justify-content:center;font-size:38px;font-weight:800;color:#a9d6a0}
+#a2 .d.on{background:var(--leaf);color:var(--deep);border-color:var(--leaf)}
+#a2 .pack{width:400px;top:500px;left:70px;transform:rotate(4deg)}
+#a2 .note{position:absolute;top:1010px;right:70px;width:520px;font-size:32px;line-height:1.5;color:#cfe3d6}
+#a2 .cod{background:var(--cream);color:var(--deep)}
+
+/* ---------- 3: offer ---------- */
+#a3{background:radial-gradient(circle at 30% 45%,#E9F5E1 0%,var(--cream) 60%)}
+#a3 .tag{position:absolute;top:80px;right:80px;background:var(--coral);color:#fff}
+#a3 h1{position:absolute;top:170px;right:80px;font-size:96px;font-weight:900;color:var(--deep);line-height:1.1}
+#a3 .packs{position:absolute;top:470px;left:40px;width:520px;height:520px}
+#a3 .packs .pack{width:300px}
+#a3 .free{position:absolute;top:450px;left:400px;width:150px;height:150px;border-radius:50%;background:var(--gold);color:var(--deep);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:34px;line-height:1.1;transform:rotate(-12deg);box-shadow:0 12px 30px rgba(0,0,0,.18);z-index:3}
+#a3 .price{position:absolute;top:520px;right:80px;text-align:right}
+#a3 .price .old{font-size:44px;color:#8a978f;text-decoration:line-through;font-weight:700}
+#a3 .price .now{font-size:200px;font-weight:900;color:var(--green);line-height:1}
+#a3 .price .cur{font-size:40px;font-weight:800;color:var(--deep)}
+#a3 .alt{position:absolute;top:900px;right:80px;width:420px;background:#fff;border-radius:24px;padding:26px 30px;box-shadow:0 10px 30px rgba(14,59,44,.1)}
+#a3 .alt b{display:block;font-size:34px;color:var(--deep)}
+#a3 .alt span{font-size:30px;color:#4f6159}
+#a3 .cta{position:absolute;bottom:150px;left:80px;right:80px;height:120px;border-radius:30px;background:var(--deep);color:#fff;font-size:50px;font-weight:900;display:flex;align-items:center;justify-content:center}
+#a3 .cod{color:var(--deep);height:120px}
+</style>
+</head>
+<body>
+
+<!-- AD 1 -->
+<div class="ab" id="a1">
+  <div class="kick">روتين بسيط لمدة 14 يوم</div>
+  <h1>بعد الغداء<br><em>تدوّر على حلى؟</em></h1>
+  <div class="sub">خلّ كوبك الدافئ هو العادة الجديدة. كيس واحد، ماء مغلي، وخلاص.</div>
+  <img class="pack" src="pack2x.png">
+  <svg class="cup" width="360" height="460" viewBox="0 0 360 460">
+    <g stroke="#9cbfa7" stroke-width="7" fill="none" stroke-linecap="round" opacity=".8">
+      <path d="M130 120 C110 90 150 70 130 40"/><path d="M180 130 C160 95 200 75 180 30"/><path d="M230 120 C210 90 250 70 230 40"/>
+    </g>
+    <path d="M70 160 L290 160 L268 420 Q266 440 246 440 L114 440 Q94 440 92 420 Z" fill="rgba(255,255,255,.55)" stroke="#c9d8cd" stroke-width="4"/>
+    <path d="M80 215 L280 215 L266 412 Q264 430 246 430 L114 430 Q96 430 94 412 Z" fill="#B8BF4E"/>
+    <path d="M80 215 L280 215 L278 240 L82 240 Z" fill="#CBD06A"/>
+    <path d="M290 230 Q350 240 340 310 Q330 370 278 360" fill="none" stroke="#c9d8cd" stroke-width="12"/>
+    
+  </svg>
+  <div class="cod"><span><i class="dot" style="background:var(--leaf)"></i>توصيل مجاني</span><span><i class="dot" style="background:var(--leaf)"></i>الدفع عند الاستلام</span></div>
+</div>
+
+<!-- AD 2 -->
+<div class="ab" id="a2">
+  <div class="big">14</div>
+  <div class="t1">تحدّي<br>14 يوم</div>
+  <div class="t2">14 كيس، كوب واحد بعد الغداء</div>
+  <div class="grid">
+    <div class="d on">1</div><div class="d on">2</div><div class="d on">3</div><div class="d on">4</div>
+    <div class="d on">5</div><div class="d on">6</div><div class="d">7</div><div class="d">8</div>
+    <div class="d">9</div><div class="d">10</div><div class="d">11</div><div class="d">12</div>
+    <div class="d">13</div><div class="d">14</div>
+  </div>
+  <img class="pack" src="pack2x.png">
+  <div class="note">الفكرة مو في الكوب لحاله، في الالتزام. علّم يومك وكمّل.</div>
+  <div class="cod"><span><i class="dot" style="background:var(--green)"></i>توصيل مجاني</span><span><i class="dot" style="background:var(--green)"></i>الدفع عند الاستلام</span></div>
+</div>
+
+<!-- AD 3 -->
+<div class="ab" id="a3">
+  <div class="chip tag">عرض لفترة محدودة</div>
+  <h1>علبتين<br>بسعر علبة</h1>
+  <div class="packs">
+    <img class="pack" src="pack2x.png" style="top:40px;left:0;transform:rotate(-7deg)">
+    <img class="pack" src="pack2x.png" style="top:90px;left:170px;transform:rotate(6deg)">
+  </div>
+  <div class="free">الثانية<br>مجاناً</div>
+  <div class="price">
+    <div class="now">199</div>
+    <div class="cur">ريال · علبتين</div>
+  </div>
+  <div class="alt"><b>تبي تكفيك شهرين؟</b><span>4 علب بـ 299 ريال</span></div>
+  <div class="cta">اطلب الحين ←</div>
+  <div class="cod"><span><i class="dot" style="background:var(--green)"></i>توصيل مجاني</span><span><i class="dot" style="background:var(--green)"></i>الدفع عند الاستلام</span></div>
+</div>
+
+</body>
+</html>
