@@ -37,22 +37,6 @@ body{background:#ccc;font-family:'Tajawal',sans-serif;display:flex;flex-directio
 #a2 .note{position:absolute;top:1010px;right:70px;width:520px;font-size:32px;line-height:1.5;color:#cfe3d6}
 #a2 .cod{background:var(--cream);color:var(--deep)}
 
-/* ---------- 3: offer ---------- */
-#a3{background:radial-gradient(circle at 30% 45%,#E9F5E1 0%,var(--cream) 60%)}
-#a3 .tag{position:absolute;top:80px;right:80px;background:var(--coral);color:#fff}
-#a3 h1{position:absolute;top:170px;right:80px;font-size:96px;font-weight:900;color:var(--deep);line-height:1.1}
-#a3 .packs{position:absolute;top:470px;left:40px;width:520px;height:520px}
-#a3 .packs .pack{width:300px}
-#a3 .free{position:absolute;top:450px;left:400px;width:150px;height:150px;border-radius:50%;background:var(--gold);color:var(--deep);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:34px;line-height:1.1;transform:rotate(-12deg);box-shadow:0 12px 30px rgba(0,0,0,.18);z-index:3}
-#a3 .price{position:absolute;top:520px;right:80px;text-align:right}
-#a3 .price .old{font-size:44px;color:#8a978f;text-decoration:line-through;font-weight:700}
-#a3 .price .now{font-size:200px;font-weight:900;color:var(--green);line-height:1}
-#a3 .price .cur{font-size:40px;font-weight:800;color:var(--deep)}
-#a3 .alt{position:absolute;top:900px;right:80px;width:420px;background:#fff;border-radius:24px;padding:26px 30px;box-shadow:0 10px 30px rgba(14,59,44,.1)}
-#a3 .alt b{display:block;font-size:34px;color:var(--deep)}
-#a3 .alt span{font-size:30px;color:#4f6159}
-#a3 .cta{position:absolute;bottom:150px;left:80px;right:80px;height:120px;border-radius:30px;background:var(--deep);color:#fff;font-size:50px;font-weight:900;display:flex;align-items:center;justify-content:center}
-#a3 .cod{color:var(--deep);height:120px}
 </style>
 </head>
 <body>
@@ -93,20 +77,47 @@ body{background:#ccc;font-family:'Tajawal',sans-serif;display:flex;flex-directio
 </div>
 
 <!-- AD 3 -->
+<style>
+#a3{background:linear-gradient(170deg,#E7F4DE 0%,var(--cream) 55%)}
+#a3 .o-tag{position:absolute;top:70px;right:70px;background:var(--coral);color:#fff;font-size:34px;font-weight:800;padding:14px 30px;border-radius:999px}
+#a3 .o-h{position:absolute;top:150px;right:70px;left:70px;font-size:80px;font-weight:900;color:var(--deep);line-height:1.12}
+#a3 .o-h em{font-style:normal;color:var(--green)}
+#a3 .o-cards{position:absolute;top:390px;left:60px;right:60px;display:grid;grid-template-columns:1fr 1.12fr;gap:28px;direction:rtl}
+#a3 .o-card{position:relative;background:#fff;border-radius:36px;padding:34px 24px 30px;text-align:center;box-shadow:0 16px 40px rgba(14,59,44,.10);border:3px solid #e3ecdf}
+#a3 .o-card.best{background:var(--deep);border-color:var(--deep);color:var(--cream);transform:translateY(-14px);box-shadow:0 30px 60px rgba(14,59,44,.35)}
+#a3 .o-ribbon{position:absolute;top:-28px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--deep);font-size:30px;font-weight:900;padding:10px 26px;border-radius:999px;white-space:nowrap}
+#a3 .o-name{font-size:42px;font-weight:800;color:var(--deep)}
+#a3 .best .o-name{color:var(--cream)}
+#a3 .o-imgs{height:250px;position:relative;margin:10px 0 6px}
+#a3 .o-imgs img{position:absolute;width:185px;border-radius:18px;box-shadow:0 20px 40px rgba(0,0,0,.25);top:20px}
+#a3 .o-price{font-size:128px;font-weight:900;line-height:1;color:var(--green)}
+#a3 .best .o-price{color:var(--leaf)}
+#a3 .o-cur{font-size:36px;font-weight:700;color:#55685f}
+#a3 .best .o-cur{color:#cfe3d6}
+#a3 .o-save{margin-top:14px;display:inline-block;background:var(--coral);color:#fff;font-size:34px;font-weight:900;padding:10px 26px;border-radius:16px}
+#a3 .o-plain{margin-top:14px;font-size:32px;color:#55685f;font-weight:600}
+#a3 .o-cta{position:absolute;bottom:135px;left:70px;right:70px;height:120px;border-radius:30px;background:var(--coral);color:#fff;font-size:52px;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 30px rgba(233,87,63,.35)}
+#a3 .cod{color:var(--deep);height:120px}
+</style>
 <div class="ab" id="a3">
-  <div class="chip tag">عرض لفترة محدودة</div>
-  <h1>علبتين<br>بسعر علبة</h1>
-  <div class="packs">
-    <img class="pack" src="pack2x.png" style="top:40px;left:0;transform:rotate(-7deg)">
-    <img class="pack" src="pack2x.png" style="top:90px;left:170px;transform:rotate(6deg)">
+  <div class="o-tag">عرض لفترة محدودة</div>
+  <div class="o-h">اختر عرضك<br><em>وابدأ تحدّي 14 يوم</em></div>
+  <div class="o-cards">
+    <div class="o-card best">
+      <div class="o-ribbon">الأكثر طلباً</div>
+      <div class="o-name">علبتين</div>
+      <div class="o-imgs"><img src="pack2x.png" style="left:20px;transform:rotate(-8deg)"><img src="pack2x.png" style="left:140px;top:34px;transform:rotate(7deg)"></div>
+      <div class="o-price">249</div><div class="o-cur">ريال سعودي</div>
+      <div class="o-save">وفّر 49 ريال</div>
+    </div>
+    <div class="o-card">
+      <div class="o-name">علبة واحدة</div>
+      <div class="o-imgs"><img src="pack2x.png" style="left:50%;transform:translateX(-50%) rotate(-4deg)"></div>
+      <div class="o-price">149</div><div class="o-cur">ريال سعودي</div>
+      <div class="o-plain">14 كيس · 14 يوم</div>
+    </div>
   </div>
-  <div class="free">الثانية<br>مجاناً</div>
-  <div class="price">
-    <div class="now">199</div>
-    <div class="cur">ريال · علبتين</div>
-  </div>
-  <div class="alt"><b>تبي تكفيك شهرين؟</b><span>4 علب بـ 299 ريال</span></div>
-  <div class="cta">اطلب الحين ←</div>
+  <div class="o-cta">اطلب الحين ←</div>
   <div class="cod"><span><i class="dot" style="background:var(--green)"></i>توصيل مجاني</span><span><i class="dot" style="background:var(--green)"></i>الدفع عند الاستلام</span></div>
 </div>
 

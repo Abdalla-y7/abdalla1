@@ -65,11 +65,17 @@ html,body{width:1080px;height:1920px;overflow:hidden;font-family:'Tajawal',sans-
   <!-- S5 offer -->
   <div class="scene" id="s5" style="background:radial-gradient(circle at 50% 55%,#E9F5E1 0%,var(--cream) 65%)">
     <div class="c" id="s5t" style="top:180px"><span style="display:inline-block;background:var(--coral);color:#fff;font-size:44px;font-weight:700;padding:16px 38px;border-radius:999px">عرض لفترة محدودة</span></div>
-    <div class="c" id="s5a" style="top:320px;font-size:130px;line-height:1.1;font-weight:900;color:var(--deep)">علبتين<br>بسعر علبة</div>
-    <img class="pack" id="p1" src="pack2x.png" style="width:360px;left:170px;top:660px">
-    <img class="pack" id="p2" src="pack2x.png" style="width:360px;left:500px;top:700px">
-    <div class="c" id="s5p" style="top:1265px;color:var(--green);font-weight:900;font-size:240px;line-height:1">199 <span style="font-size:70px;color:var(--deep)">ريال</span></div>
-    <div class="c" id="s5cta" style="top:1560px;height:150px;border-radius:40px;background:var(--deep);color:#fff;font-size:68px;font-weight:900;display:flex;align-items:center;justify-content:center">اطلب الحين، الرابط بالبايو</div>
+    <div class="c" id="s5a" style="top:320px;font-size:140px;line-height:1.1;font-weight:900;color:var(--deep)">اختر عرضك</div>
+    <img class="pack" id="p1" src="pack2x.png" style="width:340px;left:190px;top:560px">
+    <img class="pack" id="p2" src="pack2x.png" style="width:340px;left:510px;top:600px">
+    <div class="c" id="s5p" style="top:1080px;display:flex;flex-direction:column;gap:26px">
+      <div style="position:relative;height:190px;border-radius:40px;background:var(--deep);color:var(--cream);display:flex;align-items:center;justify-content:space-between;padding:0 50px;box-shadow:0 24px 50px rgba(14,59,44,.3)">
+        <span style="position:absolute;top:-26px;right:50px;background:var(--gold);color:var(--deep);font-size:34px;font-weight:900;padding:6px 24px;border-radius:999px">الأكثر طلباً · وفّر 49</span>
+        <span style="font-size:70px;font-weight:900">علبتين</span><span style="font-size:120px;font-weight:900;color:var(--leaf)">249 <small style="font-size:44px;color:#cfe3d6">ريال</small></span></div>
+      <div style="height:160px;border-radius:40px;background:#fff;color:var(--deep);display:flex;align-items:center;justify-content:space-between;padding:0 50px;border:3px solid #e3ecdf">
+        <span style="font-size:58px;font-weight:800">علبة واحدة</span><span style="font-size:100px;font-weight:900;color:var(--green)">149 <small style="font-size:40px;color:#55685f">ريال</small></span></div>
+    </div>
+    <div class="c" id="s5cta" style="top:1530px;height:150px;border-radius:40px;background:var(--coral);color:#fff;font-size:68px;font-weight:900;display:flex;align-items:center;justify-content:center">اطلب الحين، الرابط بالبايو</div>
     <div class="bar" style="color:var(--deep)"><span>● توصيل مجاني</span><span>● الدفع عند الاستلام</span></div>
   </div>
 </div>
@@ -104,7 +110,7 @@ function setTime(t){
   pop($('s5t'),t,10.7,30); pop($('s5a'),t,10.85,60);
   const a=back((t-11.1)/0.6),b=back((t-11.3)/0.6);
   $('p1').style.transform=`translateX(${(1-a)*-700}px) rotate(-8deg)`;$('p2').style.transform=`translateX(${(1-b)*700}px) rotate(7deg)`;
-  const pz=back((t-11.7)/0.5);$('s5p').style.opacity=clamp((t-11.7)/0.2);$('s5p').style.transform=`scale(${0.5+0.5*pz})`;
+  const pz=back((t-11.7)/0.5);$('s5p').style.opacity=clamp((t-11.7)/0.2);$('s5p').style.transform=`scale(${0.7+0.3*pz})`;
   const pulse=t>12.3?1+0.035*Math.sin((t-12.3)*7):1;$('s5cta').style.opacity=clamp((t-12.1)/0.3);$('s5cta').style.transform=`scale(${pulse})`;
 }
 window.setTime=setTime;window.DUR=DUR;setTime(0);
